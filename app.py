@@ -6,6 +6,7 @@ def hello():
     return jsonify(
         message="✨ Welcome to Cloud with Nidhi ✨",
         tip="Built with Flask, shipped by Jenkins, running in Docker."
+        UI="Making some changes in UI"
     )
 
 if __name__ == "__main__":
