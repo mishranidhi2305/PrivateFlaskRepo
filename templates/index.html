@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nidhi Mishra Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <div class="container">
+
+        <div class="card">
+
+            <div class="left-section">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop" alt="Profile Image" class="profile-image">
+            </div>
+
+            <div class="right-section">
+                <h1>{{ profile.name }}</h1>
+                <h2>{{ profile.role }} | {{ profile.company }}</h2>
+
+                <p>
+                    {{ profile.description }}
+                </p>
+
+                <div class="skills">
+                    {% for skill in profile.skills %}
+                        <span>{{ skill }}</span>
+                    {% endfor %}
+                </div>
+
+                <button onclick="showMessage()">Connect With Me</button>
+            </div>
+
+        </div>
+
+    </div>
+
+<script>
+    function showMessage() {
+        alert('Thanks for visiting Nidhi Mishra Portfolio 🚀');
+    }
+</script>
+
+</body>
+</html>
